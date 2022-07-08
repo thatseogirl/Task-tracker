@@ -1,5 +1,6 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
+import { MdOutlineModeEdit } from "react-icons/md"
 
 export default function Task({ usersTask, deletedTask, onToggle }) {
     return (
@@ -9,10 +10,14 @@ export default function Task({ usersTask, deletedTask, onToggle }) {
         >
             <h3>
                 {usersTask.text}
-                <FaTimes
-                    onClick={() => deletedTask(usersTask.id)}
-                    style={{ color: "red", cursor: "pointer" }}
-                />
+                <div>
+                    <MdOutlineModeEdit style={{ marginRight: '10px' }} />
+                    <FaTimes
+                        onClick={() => deletedTask(usersTask.id)}
+                        style={{ color: "red", cursor: "pointer" }}
+                    />
+                </div>
+
             </h3>
             <p>{usersTask.day}</p>
         </div>

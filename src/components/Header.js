@@ -2,16 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Button from './Button'
 
-export default function Header({ title }) {
-
-    const handleClick = (e) => {
-        console.log('click')
-    }
-
+export default function Header({ title, onAdd }) {
     return (
         <header className='header'>
             <h1>{title}</h1>
-            <Button color='green' text='Add' onClick={handleClick} />
+            <Button color='green' text='Add' onClick={onAdd} />
         </header>
     )
 }
