@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "text": "Doctors Appointment",
+      "day": "July 11th at 11:30am",
+      "reminder": true
+    },
+    {
+      "id": "2",
+      "text": "Kids Appointment",
+      "day": "July 16th at 10:30am",
+      "reminder": true
+    },
+    {
+      "id": "3",
+      "text": "Summer Break",
+      "day": "July 30th at 10:30am",
+      "reminder": false
+    },
+    {
+      "text": "Call Esther hair",
+      "day": "Tomorrow at 3:30pm",
+      "reminder": true,
+      "id": "hrFblun"
+    }
+  ]
+}
