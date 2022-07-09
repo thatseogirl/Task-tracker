@@ -1,7 +1,7 @@
 import React from "react";
 import Task from "./Task";
 
-export default function Tasks({ tasks, onDelete, onToggle }) {
+export default function Tasks({ tasks, onDelete, onToggle, editTask }) {
     return (
         <>
             {tasks.map((task) => (
@@ -10,6 +10,7 @@ export default function Tasks({ tasks, onDelete, onToggle }) {
                     usersTask={task}
                     deletedTask={onDelete}
                     onToggle={onToggle}
+                    editTask={editTask}
                 />
             ))}
         </>
