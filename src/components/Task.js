@@ -4,7 +4,7 @@ import { MdOutlineModeEdit } from "react-icons/md";
 export default function Task({ usersTask, deletedTask, onToggle, editTask }) {
     return (
         <div
-            className={`task ${usersTask.reminder ? "reminder" : ""}`}
+            className={`task ${usersTask.reminder && 'reminder'}`}
             onDoubleClick={() => onToggle(usersTask.id)}
         >
             <h3>
