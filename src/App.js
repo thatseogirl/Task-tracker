@@ -21,21 +21,21 @@ function App() {
 
   //fetch tasks
   const fetchTask = async () => {
-    const respond = await fetch("http://localhost:5000/tasks");
+    const respond = await fetch("https://my-json-server.typicode.com/thatseogirl/Task-tracker/tasks");
     const data = await respond.json();
     return data;
   };
 
   //get single task for the toggle reminder
   const singleTask = async () => {
-    const res = await fetch(`http://localhost:5000/tasks/$id}`);
+    const res = await fetch(`https://my-json-server.typicode.com/thatseogirl/Task-tracker/tasks/$id}`);
     const singleData = await res.json();
     return singleData;
   };
 
   const deleteTask = async (id) => {
     //delete from backend
-    await fetch(`http://localhost:5000/tasks/${id}`, {
+    await fetch(`https://my-json-server.typicode.com/thatseogirl/Task-tracker/tasks/${id}`, {
       method: "DELETE",
     });
 
@@ -45,7 +45,7 @@ function App() {
 
   //Add task
   const addTask = async (task) => {
-    const res = await fetch("http://localhost:5000/tasks", {
+    const res = await fetch("https://my-json-server.typicode.com/thatseogirl/Task-tracker/tasks", {
       method: "POST",
       //because we are adding a task, we have to specify
       //an header to specify content type. and also outside
@@ -72,7 +72,7 @@ function App() {
     const taskToToggle = await singleTask(id);
     const updatedTask = { ...taskToToggle, reminder: !taskToToggle.reminder };
 
-    const res = await fetch("http://localhost:5000/tasks/$id}", {
+    const res = await fetch("https://my-json-server.typicode.com/thatseogirl/Task-tracker/tasks$id}", {
       method: "PUT",
       headers: {
         "Content-type": "application/json",
